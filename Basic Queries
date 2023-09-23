@@ -1,1 +1,9 @@
-
+SELECT
+  birthYear,
+  ROUND(AVG(salary), 2) AS avgSalary
+FROM
+  peopleSavings
+GROUP BY
+  birthYear
+ORDER BY
+  avgSalary DESC
