@@ -1,1 +1,12 @@
+CREATE
+OR REPLACE TEMPORARY VIEW ratingsByMonth AS
+SELECT
+  ROUND(AVG(rating), 3) AS avgRating,
+  month(CAST(timeRecorded as timestamp)) AS month
+FROM
+  movieRatings
+GROUP BY
+  month;
 
+
+//------------------------------------------------------------------------------------------------------------------
