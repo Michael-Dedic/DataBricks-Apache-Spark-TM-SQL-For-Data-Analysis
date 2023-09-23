@@ -7,3 +7,36 @@ GROUP BY
   birthYear
 ORDER BY
   avgSalary DESC
+
+
+
+//----------------------------------------------------
+
+SELECT
+  *
+FROM
+  ssaNames
+LIMIT
+  10;
+
+//----------------------------------------------------
+
+
+SELECT count(DISTINCT firstName)
+FROM SSANames;
+
+//----------------------------------------------------
+
+SELECT firstName 
+FROM PeopleDistinctNames 
+JOIN SSADistinctNames ON firstName = ssaFirstName
+
+//----------------------------------------------------
+
+
+SELECT firstName 
+FROM PeopleDistinctNames,SSADistinctNames
+where firstName = ssaFirstName
+
+
+
